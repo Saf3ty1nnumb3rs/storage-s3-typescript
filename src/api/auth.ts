@@ -4,9 +4,9 @@ import {
   makeJWT,
   makeRefreshToken,
 } from "../auth";
-import { type ApiConfig } from "../config";
 import { createRefreshToken, revokeRefreshToken } from "../db/refresh-tokens";
 import { getUserByEmail, getUserByRefreshToken } from "../db/users";
+import type { ApiConfig } from "../types/api";
 import { BadRequestError, UserNotAuthenticatedError } from "./errors";
 import { respondWithJSON } from "./json";
 

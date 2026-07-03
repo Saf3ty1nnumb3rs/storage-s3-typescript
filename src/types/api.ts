@@ -14,5 +14,7 @@ export type ApiConfig = {
   port: string;
 };
 
+export type AspectRatioOrientation = "landscape" | "portrait" | "other";
+
 export type THUMBNAIL_UPLOAD_ROUTE = "/api/thumbnail_upload/:videoId";
 export type VIDEO_UPLOAD_ROUTE = "/api/video_upload/:videoId";

@@ -1,9 +1,8 @@
 import { hashPassword } from "../auth";
 import { createUser } from "../db/users";
+import type { ApiConfig } from "../types/api";
 import { BadRequestError } from "./errors";
 import { respondWithJSON } from "./json";
-
-import { type ApiConfig } from "../config";
 
 export async function handlerUsersCreate(cfg: ApiConfig, req: Request) {
   const { email, password } = await req.json();

@@ -1,5 +1,5 @@
-import { type ApiConfig } from "../config";
 import { reset } from "../db/db";
+import type { ApiConfig } from "../types/api";
 import { UserForbiddenError } from "./errors";
 import { respondWithJSON } from "./json";
 
