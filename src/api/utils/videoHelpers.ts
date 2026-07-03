@@ -1,27 +1,8 @@
-import type { Video } from "../../db/videos";
 import type { ApiConfig, AspectRatioOrientation } from "../../types/api";
 
 type FFProbeOutput = {
   streams: Array<{ width?: number; height?: number }>;
 };
-
-export function dbVideoToSignedVideo(cfg: ApiConfig, video: Video) {
-  if (!video.videoURL) {
-    return video;
-  }
-
-  video.videoURL = generatePresignedURL(cfg, video.videoURL, 5 * 60);
-
-  return video;
-}
-
-export function generatePresignedURL(
-  cfg: ApiConfig,
-  key: string,
-  expireTime: number,
-): string {
-  return cfg.s3Client.presign(`${key}`, { expiresIn: expireTime });
-}
 
 export function getAspectRatioOrientation(
   height: number,

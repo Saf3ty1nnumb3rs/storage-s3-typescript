@@ -7,7 +7,6 @@ import type { ApiConfig, VIDEO_UPLOAD_ROUTE } from "../types/api";
 import { BadRequestError, NotFoundError, UserForbiddenError } from "./errors";
 import { respondWithJSON } from "./json";
 import {
-  dbVideoToSignedVideo,
   getVideoAspectRatio,
   processVideoForFastStart,
   uploadVideoToS3,
@@ -57,7 +56,7 @@ export async function handlerUploadVideo(
 
     await uploadVideoToS3(cfg, s3Key, processedFilePath, file.type);
 
-    video.videoURL = s3Key;
+    video.videoURL = `https://${cfg.s3CfDistribution}/${s3Key}`;
     updateVideo(cfg.db, video);
   } finally {
     await Promise.all([
@@ -66,6 +65,5 @@ export async function handlerUploadVideo(
     ]);
   }
 
-  const signedVideo = dbVideoToSignedVideo(cfg, video);
-  return respondWithJSON(200, signedVideo);
+  return respondWithJSON(200, null);
 }
