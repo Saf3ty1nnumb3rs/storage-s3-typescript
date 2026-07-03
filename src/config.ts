@@ -1,17 +1,6 @@
+import { s3 } from "bun";
 import { newDatabase } from "./db/db";
-import type { Database } from "bun:sqlite";
-
-export type ApiConfig = {
-  db: Database;
-  jwtSecret: string;
-  platform: string;
-  filepathRoot: string;
-  assetsRoot: string;
-  s3Bucket: string;
-  s3Region: string;
-  s3CfDistribution: string;
-  port: string;
-};
+import type { ApiConfig } from "./types/api";
 
 const pathToDB = envOrThrow("DB_PATH");
 const jwtSecret = envOrThrow("JWT_SECRET");
@@ -32,6 +21,7 @@ export const cfg: ApiConfig = {
   filepathRoot: filepathRoot,
   assetsRoot: assetsRoot,
   s3Bucket: s3Bucket,
+  s3Client: s3,
   s3Region: s3Region,
   s3CfDistribution: s3CfDistribution,
   port: port,
