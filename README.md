@@ -15,7 +15,7 @@ This project is a full-stack video hosting application that handles the complete
 
 ## Quickstart
 
-*This is to be used as a *reference/\* in case you need it, you should follow the instructions in the course rather than trying to do everything here.
+_This is to be used as a reference_ in case you need it, you should follow the instructions in the course rather than trying to do everything here.
 
 ## 1. Install dependencies
 
