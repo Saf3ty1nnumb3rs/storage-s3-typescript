@@ -1,6 +1,6 @@
 # Building a Bun + SQLite + S3 Video App from Scratch
 
-## What This Project Achieves
+## A Project Foundation for File Management and Cloud Storage
 
 This project is a full-stack video hosting application that handles the complete lifecycle of user-generated video content — from authenticated upload through cloud storage to served playback. By the end of a working implementation you have:
 
