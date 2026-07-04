@@ -1,10 +1,21 @@
-# storage-s3-typescript (TubeTest)
+# storage-s3-typescript (Tube)
 
 This repo contains the starter code for the asset test application - based upon the "Learn File Servers and CDNs with S3 and CloudFront" [course](https://www.boot.dev/courses/learn-file-servers-s3-cloudfront-typescript) on [boot.dev](https://www.boot.dev)
 
+## What This Project Achieves
+
+This project is a full-stack video hosting application that handles the complete lifecycle of user-generated video content — from authenticated upload through cloud storage to served playback. By the end of a working implementation you have:
+
+- A REST API server built on **Bun's native HTTP server** with JWT-based auth (access + refresh token rotation)
+- A **SQLite-backed database** with schema migrations running automatically at startup — no ORM, no migration tool
+- **Local file serving** for thumbnails via a static asset handler
+- **S3-backed video storage** with pre-upload processing and orientation-aware key prefixing
+- A served **single-page frontend** using Bun's native HTML bundler — no Webpack, no Vite
+  see [BOOTSTRAP.md](./BOOTSTRAP.md) for details on starting from scratch with Bun + SQLite + S3
+
 ## Quickstart
 
-*This is to be used as a *reference\* in case you need it, you should follow the instructions in the course rather than trying to do everything here.
+*This is to be used as a *reference/\* in case you need it, you should follow the instructions in the course rather than trying to do everything here.
 
 ## 1. Install dependencies
 
