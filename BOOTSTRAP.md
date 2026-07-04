@@ -216,3 +216,7 @@ Working with `FormData`, `JSON.parse`, and external process output — none of w
 
 **Cloud storage patterns**
 Uploading to S3 with a structured key (`orientation/videoId.mp4`) introduces the idea of using object key namespaces as a queryable index — a common pattern in production S3 usage.
+
+---
+
+based upon the "Learn File Servers and CDNs with S3 and CloudFront" [course](https://www.boot.dev/courses/learn-file-servers-s3-cloudfront-typescript) on [boot.dev](https://www.boot.dev)
