@@ -14,10 +14,12 @@ This project is a full-stack video hosting application that handles the complete
 
 ## Useful Links
 
+- [Typescript](https://www.typescriptlang.org/)
 - [Bun Documentation](https://bun.com/docs)
 - [Amazon S3](https://aws.amazon.com/s3)
 - [Amazon CloudFront](https://aws.amazon.com/cloudfront/)
 - [Amazon IAM](https://aws.amazon.com/iam)
+- [FFMPEG](https://ffmpeg.org/download.html)
 
 ---
 

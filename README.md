@@ -11,7 +11,7 @@ This project is a full-stack video hosting application that handles the complete
 - **Local file serving** for thumbnails via a static asset handler
 - **S3-backed video storage** with pre-upload processing and orientation-aware key prefixing
 - A served **single-page frontend** using Bun's native HTML bundler — no Webpack, no Vite
-- see [BOOTSTRAP.md](./BOOTSTRAP.md) for details on starting from scratch with Bun + SQLite + S3
+- see full setup and details @ [BOOTSTRAP.md](./BOOTSTRAP.md) for starting from scratch with Bun + SQLite + S3
 
 ## Quickstart
 
